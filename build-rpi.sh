@@ -19,23 +19,23 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-docker run -d nodered/node-red-docker:rpi
+# docker run -d nodered/node-red-docker:rpi
 
-if [ $? -ne 0 ]; then
-    echo "ERROR: Docker container failed to start for rpi build."
-    exit 1
-fi
+# if [ $? -ne 0 ]; then
+#     echo "ERROR: Docker container failed to start for rpi build."
+#     exit 1
+# fi
 
-docker push nodered/node-red-docker:rpi
+# docker push nodered/node-red-docker:rpi
 
-if [ $? -ne 0 ]; then
-    echo "ERROR: Docker push failed for rpi image."
-    exit 1
-fi
+# if [ $? -ne 0 ]; then
+#     echo "ERROR: Docker push failed for rpi image."
+#     exit 1
+# fi
 
-docker push nodered/node-red-docker:$NODE_RED_VERSION-rpi
+# docker push nodered/node-red-docker:$NODE_RED_VERSION-rpi
 
-if [ $? -ne 0 ]; then
-    echo "ERROR: Docker push failed for rpi image."
-    exit 1
-fi
+# if [ $? -ne 0 ]; then
+#     echo "ERROR: Docker push failed for rpi image."
+#     exit 1
+# fi
