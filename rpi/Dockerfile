@@ -1,4 +1,4 @@
-ARG NODE_VERSION=8
+ARG NODE_VERSION=10
 FROM hypriot/rpi-node:${NODE_VERSION}
 
 # add support for gpio library
