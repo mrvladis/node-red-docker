@@ -1,5 +1,3 @@
-ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 10.16.0
 FROM resin/rpi-raspbian:jessie
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -64,6 +62,9 @@ RUN set -ex \
   ; do \
     gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
   done
+
+ENV NPM_CONFIG_LOGLEVEL info
+ENV NODE_VERSION 10.16.0
 
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-armv6l.tar.gz" \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
